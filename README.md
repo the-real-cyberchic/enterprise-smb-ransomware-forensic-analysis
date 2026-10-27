@@ -1,4 +1,4 @@
-#🛡️ Enterprise SMB Ransomware-in-Place: Incident Forensic Investigation
+# Enterprise SMB Ransomware-in-Place: Incident Forensic Investigation
 
 An individual SOC incident investigation report and technical evidence pack analyzing an enterprise ransomware campaign (`Project Enterprise 18.pcap`) using Wireshark.
 ---
