@@ -1,4 +1,4 @@
-# 🛡️ Enterprise SMB Ransomware-in-Place: Incident Forensic Investigation
+#🛡️ Enterprise SMB Ransomware-in-Place: Incident Forensic Investigation
 
 An individual SOC incident investigation report and technical evidence pack analyzing an enterprise ransomware campaign (`Project Enterprise 18.pcap`) using Wireshark.
 ---
@@ -12,8 +12,8 @@ An in-depth forensic examination of network traffic revealed a coordinated, auto
 - **Hypothesis Testing:** Differentiated legitimate backup/archive traffic (`10.18.0.30`) from aggressive ransomware execution loops (`10.18.0.107`).
 
 ## 📂 Repository Structure
-- `reports/`: Contains the complete polished PDF report (`Mercy Olalere Network Traffic Analysis.pdf`).
-- `rules/`: Contains the custom behavioral Sigma detection rule (`smb_ransomware_detection.yml`).
+- `Mercy Olalere Network Traffic Analysis.pdf`: Contains the complete polished PDF incident report.
+- `smb_ransomware_detection.yml`: Contains the custom behavioral Sigma detection rule.
 
 ## 🔍 Key Indicators of Compromise (IoCs)
 - **Attacker Workstation:** `10.18.0.107`
