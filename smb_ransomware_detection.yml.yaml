@@ -1,0 +1,28 @@
+title: Suspicious High-Frequency SMB Encryption and File Renaming
+id: 4a8f12c3-9e2b-4d7a-b611-8f3e29c10482
+status: experimental
+description: Detects abnormal client-side activity characterized by rapid file creation, write operations, and extension renaming across network file shares.
+author: Security Operations Center Analyst
+references:
+    - GiSOC Incident Investigation Report - SMB Ransomware Enterprise
+date: 2026/10/27
+logsource:
+    product: windows
+    service: security
+detection:
+    selection_smb:
+        EventID: 5145
+        ShareName: '\\\\*\\*'
+        RelativeTargetName:
+            - '*.arc2018'
+            - '*.locked'
+            - '*.crypt'
+            - '*.tmp'
+    selection_ops:
+        AccessMask:
+            - '0x2' # WRITE_DATA / FILE_WRITE_DATA
+            - '0x100' # FILE_DELETE / RENAME
+    condition: selection_smb and selection_ops
+falsepositives:
+    - Authorized enterprise backup solutions or bulk file migration utilities.
+level: high
